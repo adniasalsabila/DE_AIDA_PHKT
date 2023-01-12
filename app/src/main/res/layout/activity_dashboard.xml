@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.DashboardActivity">
+
+    <ImageView
+        android:id="@+id/logoPertamina"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/dashboard_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo_aida"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:src="@drawable/aida_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/icon_notification"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_notifications_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/profile_picture"
+        android:layout_marginEnd="10dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:src="@drawable/profile_picture"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_notification"
+        app:layout_constraintCircleRadius="@dimen/cardview_default_radius"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icon_notification" />
+
+    <TextView
+        android:id="@+id/aida_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="AIDA"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logo_aida"
+        app:layout_constraintStart_toEndOf="@+id/logo_aida"
+        app:layout_constraintTop_toTopOf="@+id/logo_aida" />
+
+    <TextView
+        android:id="@+id/dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Dashboard"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/logoPertamina"
+        app:layout_constraintTop_toBottomOf="@+id/logo_aida" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="10dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_title" >
+
+        <TextView
+            android:id="@+id/start_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Date"
+            android:textColor="@color/colorBlue"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextFieldStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="40dp"
+            app:endIconDrawable="@drawable/ic_date_range_black_24dp"
+            app:endIconMode="custom"
+            android:background="@drawable/rounded_grey"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/start_end_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Date"
+            android:textColor="@color/colorBlue"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="110dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextFieldEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="140dp"
+            app:endIconDrawable="@drawable/ic_date_range_black_24dp"
+            app:endIconMode="custom"
+            android:background="@drawable/rounded_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="10dp"
+            android:background="#39439D"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Login"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextFieldPassword" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardDate"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/title_inspection_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inspection Task Status"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/color_black_grey"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/image_pie_chart"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="90dp"
+            android:src="@drawable/pie_chart"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
